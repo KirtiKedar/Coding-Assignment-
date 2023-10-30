@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="StyleSurve.css">
+    <script language="javaScript">
+        function showInput() {
+            confirm("First Name:" + document.getElementById("firstName").value + "Last Name:" + document.getElementById("lastName").value + "Email id:" + document.getElementById("email").value + "Mobile Number:" + document.getElementById("mobile").value + "Profession:" + document.getElementById("profession").value + "DOB:" + document.getElementById("dob").value + "Country:" + document.getElementById("country").value + "Gender:" + document.getElementsByName("gender").value);
+
+        }
+
+        function resetForm() {
+            document.getElementById("survey-form").reset();
+        }
+    </script>
+
+</head>
+
+<body>
+    <form id="survey-form">
+        <label for="firstName">FirstName:</label>
+        <input type="text" name="firstName" id="firstName" required><br>
+        <label for="lastName">LastName:</label>
+        <input type="text" name="lastName" id="lastName" required><br>
+        <label for="email">Email Id:</label>
+        <input type="email" id="email" name="email" required><br>
+        <label for="number">Mobile Number:</label>
+        <input type="tel" id="number" name="number" required><br>
+        <label for="profession">Profession:</label>
+        <input type="text" id="profession" name="profession" required><br>
+        <label for="dob">DOB:</label>
+        <input type="date" id="dob" name="dob" required><br>
+        <label for="country">Country:</label>
+        <select name="country" id="country">
+    <option value="USA">USA</option>
+    <option value="Canada">Canada</option>
+    <option value="India">India</option>
+    <option value="Pakistan">Pakistan</option>
+    <option value="Australia">Australia</option>
+    <option value="Germany">Germany</option>
+    <option value="China">China</option>
+    <option value="Bangladesh">Bangladesh</option>
+    <option value="France">France</option>
+    <option value="Japan">japan</option>
+   </select><br>
+        <label for="radio">Gender:</label>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label for="female">Female</label><br>
+        <button type="submit" onclick="showInput();">Submit</button>
+        <button type="reset" value="submit" onclick="resetForm();">Reset</button>
+
+    </form>
+
+
+</body>
+
+</html>
